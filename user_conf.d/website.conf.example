@@ -1,0 +1,40 @@
+# server {
+#   listen 80;
+#   server_name analyze.outline8.com;
+
+#   location /.well-known/acme-challenge/ {
+#     root /var/www/certbot;
+#   }
+
+#   location / {
+#     return 301 https://$host$request_uri;
+#   }
+# }
+server {
+  # Listen to port 443 on both IPv4 and IPv6.
+  # listen 443 ssl default_server reuseport;
+  # listen [::]:443 ssl default_server reuseport;
+  listen 443 ssl http2;
+
+  # Domain names this server should respond to.
+  server_name website.outline8.com;
+
+  # Load the certificate files.
+  ssl_certificate /etc/letsencrypt/live/website/fullchain.pem;
+  ssl_certificate_key /etc/letsencrypt/live/website/privkey.pem;
+  ssl_trusted_certificate /etc/letsencrypt/live/website/chain.pem;
+
+  # Load the Diffie-Hellman parameter.
+  ssl_dhparam /etc/letsencrypt/dhparams/dhparam.pem;
+
+  # return 200 'Let\'s Encrypt certificate successfully installed!';
+  # add_header Content-Type text/plain;
+
+  # 静态文件目录
+  location / {
+    # autoindex on;
+    root /var/www/;
+    index index.html index.htm;
+    try_files $uri.html $uri $uri/ =404;
+  }
+}
