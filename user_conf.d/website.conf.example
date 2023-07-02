@@ -30,10 +30,12 @@ server {
   # return 200 'Let\'s Encrypt certificate successfully installed!';
   # add_header Content-Type text/plain;
 
+  # return https://outline8.com$request_uri;
+
   # 静态文件目录
   location / {
     # autoindex on;
-    root /var/www/;
+    root /var/www/website/;
     index index.html index.htm;
     try_files $uri.html $uri $uri/ =404;
   }
