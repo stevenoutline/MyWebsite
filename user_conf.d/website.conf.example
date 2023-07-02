@@ -1,15 +1,3 @@
-# server {
-#   listen 80;
-#   server_name analyze.outline8.com;
-
-#   location /.well-known/acme-challenge/ {
-#     root /var/www/certbot;
-#   }
-
-#   location / {
-#     return 301 https://$host$request_uri;
-#   }
-# }
 server {
   # Listen to port 443 on both IPv4 and IPv6.
   # listen 443 ssl default_server reuseport;

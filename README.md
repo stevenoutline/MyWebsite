@@ -1,5 +1,21 @@
 # MyWebsite
 
+## 安装
+
+```bash
+# 获取项目
+git clone https://github.com/stevenoutline/MyWebsite.git
+
+# 配置域名
+cd MyWebsite/user_conf.d &&
+mv website.conf.example website.conf &&
+vim website.conf
+# 将 website.outline8.com 更换为对应域名
+
+# 启动 docker
+sudo docker compose up -d
+```
+
 ## 常用命令
 
 ```bash
