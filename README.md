@@ -13,6 +13,7 @@ vim website.conf
 # 将 website.outline8.com 更换为对应域名
 
 # 启动 docker
+cd ..
 sudo docker compose up -d
 ```
 
