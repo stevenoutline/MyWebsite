@@ -6,7 +6,7 @@ server {
   http2  on;
 
   # Domain names this server should respond to.
-  server_name website.outline8.com;
+  server_name website.outlinevpn.net;
 
   # Load the certificate files.
   ssl_certificate /etc/letsencrypt/live/website/fullchain.pem;
@@ -19,7 +19,7 @@ server {
   # return 200 'Let\'s Encrypt certificate successfully installed!';
   # add_header Content-Type text/plain;
 
-  # return https://outline8.com$request_uri;
+  # return https://outlinevpn.net$request_uri;
 
   # 静态文件目录
   location / {

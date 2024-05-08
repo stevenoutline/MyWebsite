@@ -10,7 +10,7 @@ git clone https://github.com/stevenoutline/MyWebsite.git
 cd MyWebsite/user_conf.d &&
 mv website.conf.example website.conf &&
 vim website.conf
-# 将 website.outline8.com 更换为对应域名
+# 将 website.outlinevpn.net 更换为对应域名
 
 # 启动 docker
 cd ..
